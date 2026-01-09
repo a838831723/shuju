@@ -3,4 +3,3 @@ import sys
 a = sys.version.split()[0]
 print(a)
 print(sys.executable)
-print(pd.__version__)
