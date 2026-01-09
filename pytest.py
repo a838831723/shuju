@@ -1,35 +1,6 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python3
 
-import sys
-import os
-
-def ensure_python3():
-    """确保脚本使用Python 3执行"""
-    if sys.version_info[0] < 3:
-        # Python 2环境，切换到Python 3
-        python3_path = '/bin/python3'
-        current_script = os.path.abspath(__file__)
-        
-        print(f"当前是Python {sys.version_info[0]}.{sys.version_info[1]}，正在切换到Python 3...")
-        
-        # 重建环境变量
-        env = os.environ.copy()
-        env['PYTHON_LAUNCHER'] = python3_path
-        
-        # 用Python 3重新执行当前脚本
-        os.execve(python3_path, [python3_path, current_script] + sys.argv[1:], env)
-        # 如果execve失败
-        print("切换到Python 3失败")
-        sys.exit(1)
-
-# 确保使用Python 3
-ensure_python3()
-
-# ===================== 以下是你的实际代码 =====================
-print("✓ 成功使用Python 3执行!")
-print(f"Python版本: {sys.version}")
-print(f"Python路径: {sys.executable}")
 
 import sys
 print(sys.version.split()[0])
