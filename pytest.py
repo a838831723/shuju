@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import pandas as pd
+# import pandas as pd
 import sys
 a = sys.version.split()[0]
 print(a)
