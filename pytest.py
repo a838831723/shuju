@@ -13,7 +13,6 @@ from functools import wraps
 import inspect
 from datetime import date,timedelta,datetime
 import numpy as np
-import mail
 from sqlalchemy import text
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
